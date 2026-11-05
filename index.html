@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#075e54">
+  <title>Conversa — Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <main class="app">
+    <section id="entry" class="entry">
+      <div class="brand-mark">✉</div>
+      <h1>Conversa</h1>
+      <p>Seu espaço para conversar e compartilhar momentos.</p>
+      <label for="nickname">Como você quer ser chamado(a)?</label>
+      <input id="nickname" maxlength="28" placeholder="Seu nome" autocomplete="nickname">
+      <button id="enterBtn" class="primary">Entrar na conversa</button>
+      <button id="createBtn" class="secondary">Criar uma nova sala</button>
+      <p id="entryError" class="error"></p>
+      <small>Ao entrar, você concorda que qualquer pessoa com o link da sala poderá visualizar as mensagens.</small>
+    </section>
+
+    <section id="chat" class="chat hidden">
+      <header class="topbar">
+        <div class="avatar">C</div>
+        <div class="room-info">
+          <strong>Conversa</strong>
+          <span id="roomStatus">conectando...</span>
+        </div>
+        <button id="shareBtn" class="icon-btn" title="Copiar link da sala" aria-label="Copiar link">↗</button>
+      </header>
+      <div id="notice" class="notice">As mensagens desta sala são visíveis para quem tiver o link.</div>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <div class="composer">
+        <label class="attach icon-btn" title="Enviar foto" aria-label="Enviar foto">＋
+          <input id="photoInput" type="file" accept="image/*" hidden>
+        </label>
+        <textarea id="messageInput" rows="1" maxlength="3000" placeholder="Digite uma mensagem"></textarea>
+        <button id="recordBtn" class="icon-btn" title="Gravar áudio" aria-label="Gravar áudio">🎙</button>
+        <button id="sendBtn" class="send-btn" aria-label="Enviar mensagem">➤</button>
+      </div>
+      <div id="recordHint" class="record-hint"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
