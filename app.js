@@ -1,8 +1,8 @@
 // 1) Crie um projeto gratuito em https://supabase.com
 // 2) Copie Project URL e anon/public key em Settings > API
 // 3) Cole os dois valores abaixo e execute schema.sql no SQL Editor.
-const SUPABASE_URL = "COLE_AQUI_SUA_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "COLE_AQUI_SUA_ANON_PUBLIC_KEY";
+const SUPABASE_URL = "https://ipycikzhjcnkvhnzvtac.supabase.co";
+const SUPABASE_ANON_KEY = "https://ipycikzhjcnkvhnzvtac.supabase.co";
 const BUCKET = "chat-media";
 
 const $ = (id) => document.getElementById(id);
